@@ -4,13 +4,10 @@ const { User } = require("../models");
 const seedUsers = require("./user-seeds");
 
 mongoose
-  .connect(
-    "mongodb+srv://404pandas:Yennefer212@cluster0.5y0hfyo.mongodb.net/",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(proccess.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connection to DB open");
   })
