@@ -118,7 +118,7 @@ npm run start
 
 ## Usage
 
-Video
+https://github.com/404pandas/social-network-api/assets/113853550/7d7e0153-6da9-4835-a01e-0d2bacb1bcf6
 
 ### Available Routes
 
