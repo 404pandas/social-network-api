@@ -118,7 +118,28 @@ npm run start
 
 ## Usage
 
-Once the app is functional, video will be added here
+Video
+
+### Available Routes
+
+#### User Routes
+
+/api/users - Get all users, create user
+/api/users/:userId - Get single user, update user, delete user
+
+#### Friend Routes
+
+/api/users/:usertId/friends/:friendId - Add friend, delete friend
+
+#### Thought Routes
+
+/api/thoughts/ - Get all thoughts, create thought
+/api/thoughts/:thoughtId - Get single thought, update thought, delete thought
+
+#### Reaction Routes
+
+/api/thoughts/:thoughtId/reactions - Create reaction
+/api/thoughts/:thoughtId/reactions/:reactionId - Delete reaction
 
 <!-- ROADMAP -->
 
