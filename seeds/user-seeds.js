@@ -1,11 +1,19 @@
 const seedUsers = [
   {
-    username: "404pandas",
-    email: "mary.panda.jackson@gmail.com",
+    username: "Yennefer",
+    email: "yennefer@gmail.com",
   },
   {
-    username: "Yennefer",
-    email: "yennefers.fake.email@gmail.com",
+    username: "Triss",
+    email: "triss@gmail.com",
+  },
+  {
+    username: "Ciri",
+    email: "ciri@gmail.com",
+  },
+  {
+    username: "Geralt",
+    email: "geralt@gmail.com",
   },
 ];
 
