@@ -1,6 +1,7 @@
 const { Thought, User } = require("../models");
 
 const thoughtController = {
+  // gets all thoughts
   async getAllThoughts(req, res) {
     try {
       const thoughtData = await Thought.find().sort({ createdAt: -1 });
@@ -11,6 +12,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+  // gets single thought by id
   async getSingleThought(req, res) {
     try {
       const thoughtData = await Thought.findOne({
@@ -27,6 +29,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+  // creates a thought
   async createThought(req, res) {
     try {
       const thoughtData = await Thought.create(req.body);
@@ -49,6 +52,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+  // updates thought by ID
   async updateThought(req, res) {
     const thoughtData = await Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -65,6 +69,7 @@ const thoughtController = {
     console.log(err);
     res.status(500).json(err);
   },
+  // deletes thought by ID
   async deleteThought(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndRemove({
@@ -93,6 +98,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+  // adds reaction to thought
   async addReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
@@ -111,6 +117,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+  // removes reaction from thought
   async removeReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(

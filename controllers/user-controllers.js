@@ -1,7 +1,7 @@
 const { User } = require("../models");
 
 const userControllers = {
-  // get all users
+  // gets all users
   async getAllUsers(req, res) {
     try {
       const userData = await User.find().select("-__v");
@@ -12,7 +12,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
-  // get single user
+  // gets single user
   async getSingleUser(req, res) {
     try {
       const userData = await User.findOne({ _id: req.params.userId }).select(
@@ -31,6 +31,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
+  // Creates user
   async createUser(req, res) {
     try {
       const userData = await User.create(req.body);
@@ -40,6 +41,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
+  // Adds friend to user
   async addFriend(req, res) {
     try {
       const userData = await User.findOneAndUpdate(
@@ -58,6 +60,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
+  // Removes friend from user
   async removeFriend(req, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -76,6 +79,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
+  // updates User
   async updateUser(req, res) {
     try {
       const dbUserData = await User.findOneAndUpdate(
@@ -99,6 +103,7 @@ const userControllers = {
       res.status(500).json(err);
     }
   },
+  // deletes User
   async deleteUser(req, res) {
     try {
       const dbUserData = await User.findOneAndDelete({
