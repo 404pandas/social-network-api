@@ -22,7 +22,7 @@
     <a href="https://github.com/404pandas/social-network-api"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/404pandas/social-network-api">View Demo Video</a>
+    <a href="#usage">View Demo Video</a>
     ·
     <a href="https://github.com/404pandas/social-network-api/issues">Report Bug</a>
     ·
